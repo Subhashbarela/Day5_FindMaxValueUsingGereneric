@@ -12,7 +12,7 @@ namespace MaxValueUsingGeneric
         {
             CheckMaxValue max = new CheckMaxValue();           
 
-            Console.WriteLine("1: max of integer value \n2: max of float value \n3: max string value \n4: Refactor code using generic method");
+            Console.WriteLine("1: max of integer value \n2: max of float value \n3: max string value \n4: Refactor code using generic method \n5: using generic class");
             Console.WriteLine("Enter the choice...!");
             int choice=int.Parse(Console.ReadLine());
             switch (choice)
@@ -43,6 +43,16 @@ namespace MaxValueUsingGeneric
                         float floatmax = GenericMethodClass.CheckMaxNumber<float>(4.5f, 2.45f, 30.7f);
                         Console.WriteLine("max of float is : " + floatmax);
                         string stringmax = GenericMethodClass.CheckMaxNumber<string>("Apple", "Peach", "Banana");
+                        Console.WriteLine("max of string is : " + stringmax);
+                        break;
+                    } 
+                case 5:
+                    {
+                        int intmax = GenericClass<int>.CheckMaxNumber(40, 50, 30);
+                        Console.WriteLine("max of int is : " + intmax);
+                        float floatmax = GenericClass<float>.CheckMaxNumber(4.5f, 15.45f, 12.7f);
+                        Console.WriteLine("max of float is : " + floatmax);
+                        string stringmax = GenericClass<string>.CheckMaxNumber("Apple", "Peach", "Banana");
                         Console.WriteLine("max of string is : " + stringmax);
                         break;
                     }
